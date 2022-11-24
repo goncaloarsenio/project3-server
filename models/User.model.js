@@ -14,6 +14,10 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Password is required."],
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
     firstName: {
       type: String,
       required: [true, "Name is required."],
@@ -54,11 +58,6 @@ const userSchema = new Schema(
 
     description: {
       type: String,
-    },
-
-    usertype: {
-      type: String,
-      default: normal,
     },
   },
   {

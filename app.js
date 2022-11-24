@@ -27,6 +27,12 @@ app.use("/api", articleRoutes);
 const courseRoutes = require("./routes/course.routes");
 app.use("/api", courseRoutes);
 
+const partnerRoutes = require("./routes/partner.routes");
+app.use("/api", partnerRoutes);
+
+const profileRoutes = require("./routes/profile.routes");
+app.use("/api", profileRoutes);
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

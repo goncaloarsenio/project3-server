@@ -4,19 +4,16 @@ const Article = require('../models/Article.model')
 
 
 
-
 //Create article
 
 router.post('/articles', async(req,res,next)=>{
-
     try {
-     const {name,description,img} = req.body
-     const newArticle = await Article.create({name,description,img})
-    
-    
-     /* Now that we don't have a render (because we don't have views), we use res.json to send a json object */
-     res.status(200).json(newArticle)
-    
+        const {name,description,img} = req.body
+        const newArticle = await Article.create({name,description,img})
+       
+       
+        /* Now that we don't have a render (because we don't have views), we use res.json to send a json object */
+        res.status(200).json(newArticle)
     
     
     } catch (error) {
@@ -30,7 +27,7 @@ router.post('/articles', async(req,res,next)=>{
     //Get all articles
     router.get('/articles', async(req,res,next)=>{
         try {
-            const allArticles= await Article.find()
+            const allArticles = await Article.find()
     
             res.status(200).json(allArticles)
     
