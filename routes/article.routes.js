@@ -1,8 +1,9 @@
-const router = require('express').Router();
+const express = require('express')
+const router = express.Router();
 const Article = require('../models/Article.model')
 
 
-router.post('/articles', async(req,res,next)=>{
+router.post('/articles', async (req,res,next)=>{
 
     try {
      const {name,description,img} = req.body
