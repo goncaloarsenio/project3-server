@@ -56,6 +56,10 @@ const userSchema = new Schema(
       type: String,
     },
 
+    usertype: {
+      type: String,
+      default: normal,
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
