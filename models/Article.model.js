@@ -3,9 +3,19 @@ const { Schema, model } = require("mongoose");
 
 const articleSchema = new Schema(
   { 
+    article: {
+      type: String,
+      required: true,
+    },
+
     name: {
         type: String,
         required: true,
+    },
+
+    intro: {
+      type: String,
+      required: true,
     },
 
     img: {
@@ -17,6 +27,10 @@ const articleSchema = new Schema(
         required: true,
     },
 
+    },
+    
+    {
+      timestamps: true
     }
   )
 

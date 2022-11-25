@@ -9,6 +9,11 @@ const courseSchema = new Schema(
         img:{
             type: String,
         },
+
+        company: {
+            type: String,
+        },
+
         type:{
             type: String,
             required: true,
@@ -18,7 +23,7 @@ const courseSchema = new Schema(
             required: true,
         },
         duration:{
-            type: Number,
+            type: String,
             required: true,
         }
     }
