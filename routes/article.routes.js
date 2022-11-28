@@ -63,7 +63,7 @@ router.post('/articles', async(req,res,next)=>{
     })
 
 
-//Delete
+//Delete article
 router.delete('/articles/:id',async(req,res,next)=>{
     try {
         const {id} = req.params

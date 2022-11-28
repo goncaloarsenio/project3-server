@@ -18,7 +18,23 @@ const courseSchema = new Schema(
             required: true,
         },
         duration:{
-            type: Number,
+            type: String,
+            required: true,
+        },
+        company:{
+            type: String,
+            required: true,
+        },
+        topics:{
+            type: String,
+            required: true,
+        },
+        person:{
+            type: String,
+            required: true,
+        },
+        occupation:{
+            type: String,
             required: true,
         }
     }

@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router();
 const User = require('../models/User.model')
 
+
+//Edit profile
+
 router.put('/profile/:id', async(req,res,next)=>{
     const {id} = req.params;
     const { firstName, lastName} = req.body
@@ -16,7 +19,7 @@ router.put('/profile/:id', async(req,res,next)=>{
 })
 
 
-//Delete
+//Delete profile
 router.delete('/profile/:id',async(req,res,next)=>{
     const {id} = req.params
 try {
