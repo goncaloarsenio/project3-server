@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Course = require('../models/Courses.model');
-const Partner = require('../models/Partner.model')
+const Article = require('../models/Article.model');
+const Partner = require('../models/Partner.model');
 
 const MONGO_URI = 'mongodb://127.0.0.1:27017/project3-server';
 
@@ -25,16 +26,18 @@ const courses = [
     person: "Lourenço Pereira",
     occupation: "Recursos Humanos"
   },
+
+
   {
-    name: 'Como treinar Soft Skills',
-    type: 'Workshop',
-    description: "Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores. As soft skills também estão relacionadas à sua forma de se relacionar e interagir com as pessoas e afetam os relacionamentos no ambiente corporativo e, por consequência, a produtividade da equipe. Além de serem difíceis de avaliar e não são adquiridas com capacitação técnica.",
-    duration: "16:30 - 19:00",
-    company: "StartUp PT",
-    topics: "Curriculo / CM",
-    person: "Rui Oliveira",
-    occupation: "Relações Publicas"
-  },
+    name:"Como treinar Soft Skills",
+    type:"Workshop",
+    company:"StartUp PT",
+    img: "",
+    description:`Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores. Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores.  
+
+    As soft skills também estão relacionadas à sua forma de se relacionar e interagir com as pessoas e afetam os relacionamentos no ambiente corporativo e, por consequência, a produtividade da equipe. Além de serem difíceis de avaliar e não são adquiridas com capacitação técnica.As soft skills também estão relacionadas à sua forma de se relacionar e interagir com as pessoas e afetam os relacionamentos no ambiente corporativo e, por consequência, a produtividade da equipe. Além de serem difíceis de avaliar e não são adquiridas com capacitação técnica.`,
+    duration: "2:30h"
+  }
 ];
 
 const partners = [
@@ -101,9 +104,7 @@ async function seeds() {
     const x = await mongoose.connect(MONGO_URI);
     console.log(`Connected to: ${x.connections[0].name}`);
 
-    const createdCourse = await Course.create(courses);
-    const createdPartner = await Partner.create(courses);
-
+    const created = await Course.create(courses);
 
     console.log(`Successfuly created ${createdCourse.length}`);
 
@@ -111,6 +112,7 @@ async function seeds() {
   } catch (error) {
     console.log(error);
   }
+
 }
 
 seeds();

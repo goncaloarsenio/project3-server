@@ -9,6 +9,11 @@ const courseSchema = new Schema(
         img:{
             type: String,
         },
+
+        company: {
+            type: String,
+        },
+
         type:{
             type: String,
             required: true,

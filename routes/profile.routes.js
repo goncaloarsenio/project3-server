@@ -15,7 +15,8 @@ router.put('/profile/:id', async(req,res,next)=>{
           
     } catch (error) {
         next(error)
-}                                                                                                                                                                                                                                   
+}                                                                                                                                                                                                   
+                                
 })
 
 

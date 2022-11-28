@@ -1,16 +1,20 @@
 const express = require('express')
 const router = express.Router();
 const Article = require('../models/Article.model')
-
+const {isAuthenticated} = require('../middleware/jwt.middleware')
 
 
 //Create article
 
-router.post('/articles', async(req,res,next)=>{
+router.post('/articles', /* isAuthenticated, */ async (req,res,next)=>{
     try {
-        const {name,description,img} = req.body
-        const newArticle = await Article.create({name,description,img})
-       
+/*         if(!req.payload.admin){
+            res.status(403).json({message: "Forbidden"})
+            return
+        } */
+        const {name,description,intro,article, img} = req.body
+        const newArticle = await Article.create({name,description,intro,article, img})
+
        
         /* Now that we don't have a render (because we don't have views), we use res.json to send a json object */
         res.status(200).json(newArticle)
