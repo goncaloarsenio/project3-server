@@ -32,11 +32,12 @@ const courses = [
     name:"Como treinar Soft Skills",
     type:"Workshop",
     company:"StartUp PT",
-    img: "",
-    description:`Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores. Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores.  
-
+    description:`Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores. Soft skills são as competências que competem a personalidade e comportamento do profissional. Envolvem aptidões mentais, emocionais e sociais. Podemos dizer que são habilidades particulares, pois nascem de acordo com as experiências, cultura, criação e educação de cada pessoa, entre outros fatores. 
     As soft skills também estão relacionadas à sua forma de se relacionar e interagir com as pessoas e afetam os relacionamentos no ambiente corporativo e, por consequência, a produtividade da equipe. Além de serem difíceis de avaliar e não são adquiridas com capacitação técnica.As soft skills também estão relacionadas à sua forma de se relacionar e interagir com as pessoas e afetam os relacionamentos no ambiente corporativo e, por consequência, a produtividade da equipe. Além de serem difíceis de avaliar e não são adquiridas com capacitação técnica.`,
-    duration: "2:30h"
+    duration: "11:00 - 12:00",
+    topics: "Entrevista",
+    person: "Lourenço Pereira",
+    occupation: "Recursos Humanos"
   }
 ];
 
