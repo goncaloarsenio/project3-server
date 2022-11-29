@@ -59,8 +59,8 @@ router.post('/articles', /* isAuthenticated, */ async (req,res,next)=>{
     router.put('/articles/:id', async(req,res,next)=>{
         try {
             const {id} = req.params;
-            const {name,description,img} = req.body
-            const updatedArticle = await Article.findByIdAndUpdate(id,{name,description,img},{new:true})
+            const {name,description,img, article, intro} = req.body
+            const updatedArticle = await Article.findByIdAndUpdate(id,{name,description,img, article, intro },{new:true})
             res.status(200).json(updatedArticle)
         } catch (error) {
             next(error)
