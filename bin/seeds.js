@@ -119,4 +119,8 @@ async function seeds() {
 
 }
 
+
+const articles = [
+
+]
 seeds();
