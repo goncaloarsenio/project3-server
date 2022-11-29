@@ -22,6 +22,10 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    genre:{
+      type: String,
+      default:''
+    },
 
     lastName: {
       type: String,
@@ -30,34 +34,42 @@ const userSchema = new Schema(
 
     birthdayDate: {
       type: Date,
+      default: Date.now()
     },
 
     phoneNumber: {
       type: Number,
+      default:0
     },
 
     residenceArea: {
       type: String,
+      default:''
     },
 
     formationArea: {
       type: String,
+      default:''
     },
 
     formationDegree: {
       type: String,
+      default:''
     },
 
     interestAreas: {
       type: String,
+      default:''
     },
       
     interests: {
       type: String,
+      default:''
     }, 
 
     description: {
       type: String,
+      default:''
     },
 
     favorites: [{
