@@ -12,7 +12,8 @@ router.post('/articles', /* isAuthenticated, */ async (req,res,next)=>{
             res.status(403).json({message: "Forbidden"})
             return
         } */
-        const {name,description,intro,article, img} = req.body
+        let {name,description,intro,article, img} = req.body
+        if(!img) img = 'https://cdn.mensagenscomamor.com/content/images/m000134490.jpg?v=0&w=800&h=1122'
         const newArticle = await Article.create({name,description,intro,article, img})
 
        
@@ -78,6 +79,7 @@ router.delete('/articles/:id',async(req,res,next)=>{
         next(error)
     }
 })
+
 
 
 
