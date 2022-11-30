@@ -15,7 +15,8 @@ const courses = [
     topics: "Curriculo / Portefólio",
     person: "Ruben Fernandes",
     occupation: "UX Designer",
-    color: "#CEDB82"
+    color: "#CEDB82",
+    img: "https://i.ibb.co/SNxXGsb/image-72.png"
 
   },
   {
@@ -27,7 +28,8 @@ const courses = [
     topics: "Entrevista",
     person: "Lourenço Pereira",
     occupation: "Recursos Humanos",
-    color: "#6392EF"
+    color: "#6392EF",
+    img: "https://i.ibb.co/80FKNjV/image-70.png"
   },
 
 
@@ -41,7 +43,8 @@ const courses = [
     topics: "Curriculo / CM",
     person: "Rui Oliveira",
     occupation: "Relações Públicas",
-    color: "#D5BFF7"
+    color: "#D5BFF7",
+    img: "https://i.ibb.co/QJRwHbC/image-73.png"
   }
 ];
 
