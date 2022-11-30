@@ -14,7 +14,9 @@ const courses = [
     company: "Farfetch",
     topics: "Curriculo / Portefólio",
     person: "Ruben Fernandes",
-    occupation: "UX Designer"
+    occupation: "UX Designer",
+    color: "#CEDB82"
+
   },
   {
     name: 'Prepara-te para uma entrevista online',
@@ -24,7 +26,8 @@ const courses = [
     company: "Fullsix",
     topics: "Entrevista",
     person: "Lourenço Pereira",
-    occupation: "Recursos Humanos"
+    occupation: "Recursos Humanos",
+    color: "#6392EF"
   },
 
 
@@ -37,7 +40,8 @@ const courses = [
     company:"StartUp PT",
     topics: "Curriculo / CM",
     person: "Rui Oliveira",
-    occupation: "Relações Públicas"
+    occupation: "Relações Públicas",
+    color: "#D5BFF7"
   }
 ];
 
