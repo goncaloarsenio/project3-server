@@ -3,7 +3,7 @@ const Course = require('../models/Courses.model');
 const Article = require('../models/Article.model');
 const Partner = require('../models/Partner.model');
 
-const MONGO_URI = 'mongodb://127.0.0.1:27017/project3-server';
+const MONGO_URI = 'mongodb+srv://Ricardo:12345@project.nlqoh6b.mongodb.net/project3?';
 
 const courses = [
   {
