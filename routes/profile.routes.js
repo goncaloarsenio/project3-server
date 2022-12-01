@@ -60,7 +60,9 @@ router.delete("/profile/:id", async (req, res, next) => {
 router.get("/profile/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    const foundUser = await User.findById(id);
+    const foundUser = await User.findById(id)
+      .populate("favorites")
+      .populate("subscribed");
     res.status(200).json(foundUser);
   } catch (error) {
     next(error);
@@ -73,7 +75,22 @@ router.put("/favorite/:id", isAuthenticated, async (req, res, next) => {
   try {
     const updatedProfile = await User.findByIdAndUpdate(
       userId,
-      { $push: { favorites: id } },
+      { $addToSet: { favorites: id } },
+      { new: true }
+    );
+    res.status(200).json(updatedProfile);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.put("/courses/:id", isAuthenticated, async (req, res, next) => {
+  const { id } = req.params;
+  const userId = req.payload._id;
+  try {
+    const updatedProfile = await User.findByIdAndUpdate(
+      userId,
+      { $addToSet: { subscribed: id } },
       { new: true }
     );
     res.status(200).json(updatedProfile);

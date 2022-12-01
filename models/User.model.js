@@ -22,9 +22,9 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
-    genre:{
+    genre: {
       type: String,
-      default:''
+      default: "",
     },
 
     lastName: {
@@ -34,49 +34,57 @@ const userSchema = new Schema(
 
     birthdayDate: {
       type: Date,
-      default: Date.now()
+      default: Date.now(),
     },
 
     phoneNumber: {
       type: Number,
-      default:0
+      default: 0,
     },
 
     residenceArea: {
       type: String,
-      default:''
+      default: "",
     },
 
     formationArea: {
       type: String,
-      default:''
+      default: "",
     },
 
     formationDegree: {
       type: String,
-      default:''
+      default: "",
     },
 
     interestAreas: {
       type: String,
-      default:''
+      default: "",
     },
-      
+
     interests: {
       type: String,
-      default:''
-    }, 
+      default: "",
+    },
 
     description: {
       type: String,
-      default:''
+      default: "",
     },
 
-    favorites: [{
-      type: Schema.Types.ObjectId, ref:"Article"
-    }]
+    favorites: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Article",
+      },
+    ],
 
-    
+    subscribed: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
