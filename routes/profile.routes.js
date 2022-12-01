@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const User = require('../models/User.model')
+const User = require("../models/User.model");
 const { isAuthenticated } = require("../middleware/jwt.middleware.js");
-
-
 
 //Edit profile
 
@@ -64,6 +62,21 @@ router.get("/profile/:id", async (req, res, next) => {
   try {
     const foundUser = await User.findById(id);
     res.status(200).json(foundUser);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.put("/favorite/:id", isAuthenticated, async (req, res, next) => {
+  const { id } = req.params;
+  const userId = req.payload._id;
+  try {
+    const updatedProfile = await User.findByIdAndUpdate(
+      userId,
+      { $push: { favorites: id } },
+      { new: true }
+    );
+    res.status(200).json(updatedProfile);
   } catch (error) {
     next(error);
   }
